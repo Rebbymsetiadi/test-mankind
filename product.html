@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<!-- SEO -->
+	<title>Me - HTML Template Demo</title>
+	
+
+
+
+	<!-- Styles -->
+	<link rel='stylesheet' href='assets/css/me.css' type='text/css' media='screen' />
+    <link rel='stylesheet' href='assets/css/custom.css' type='text/css' media='screen' />
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style type="text/css">
+      input[type=text].product {
+        width: 130px;
+    /* box-sizing: border-box; */
+    border: 0px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url(images/searchicon-black.png);          
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+        color: #fff;
+    position: absolute;
+    top: 8%;
+}
+
+input[type=text]:focus {
+    width: 50%;
+}
+    </style>
+    
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+        
+        var navigation = $('#nav-main').okayNav();
+</script> 
+</head>
+
+<body id="fullsingle" class="product">
+
+  
+    
+    
+<div class="topnav rotate" id="myTopnav">
+      <a href="index.html">Home</a>
+      <a href="product.html">Product</a>
+      <a href="#contact">about us</a>
+      <a href="#about">contact us</a>
+      <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div class="icon-user">
+    <span class="user">Robert A.</span>
+    <img src="images/user.png" width="65px"> 
+</div>
+<div class="fs-me">
+    <form>
+      <input  type="text" name="search" placeholder="Search..">
+    </form>
+	<!-- Content Container -->
+	<div class="me-content">
+		<div class="bio-pro">
+			
+			<p>Shirt</p>
+            <span class="product1">New style from our product</span>
+
+		</div>
+	</div>
+    <div class="desk-icon">
+            <ul>
+              <li><a href="#"><img src="images/shirt-icon.png" width="45px;"></a></li>
+              <li><a href="#"><img src="images/pants-icon.png" width="45px;"></a></li>
+              <li><a href="#"><img src="images/polo-icon.png" width="45px;"></a></li>
+              <li><a href="#"><img src="images/belt-icon.png" width="45px;"></a></li>
+              <li><a href="#"><img src="images/bag-icon.png" width="45px;"></a></li>
+                <li><a href="#"><img src="images/watch-icon.png" width="65px;"></a></li>
+                <li><a href="#"><img src="images/shoe-icon.png" width="45px;"></a></li>
+            </ul>
+    
+    </div>
+    <div class="mobile-icon">
+    
+    <div id="menu_icon" class="" style="border-radius: 50%;position: relative; width: 45px; height: 45px; background-color: #b10b0b; bottom:-26px;left: 172px;">
+			<div class="wcircle-icon">
+				<div style="text-align: center;font-size: 33px;position: absolute;bottom: -7px;left: 13px;">
+					+
+				</div>
+			</div>
+			<div class="wcircle-menu" style="display:none;">
+				<div class="wcircle-menu-item">
+					<img src="images/shirt-icon-mob.png" width="35px;">
+				</div>
+				<div class="wcircle-menu-item">
+					<img src="images/pants-icon-mob.png" width="35px;">
+				</div>
+				<div class="wcircle-menu-item">
+					<img src="images/polo-icon-mob.png" width="35px;">
+				</div>
+                <div class="wcircle-menu-item">
+					<img src="images/belt-icon-mob.png" width="35px;">
+				</div>
+                <div class="wcircle-menu-item">
+					<img src="images/bag-icon-mob.png" width="35px;">
+				</div>
+                <div class="wcircle-menu-item">
+					<img src="images/watch-icon-mob.png" width="35px;">
+				</div>
+                <div class="wcircle-menu-item">
+					<img src="images/shoe-icon-mob.png" width="35px;">
+				</div>
+			</div>
+		</div>
+
+		
+
+
+        <script type="text/javascript" src="assets/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="assets/js/jQuery.WCircleMenu.js"></script>
+
+        <script type="text/javascript">
+        
+			$(document).ready(function(){
+				$('#menu_icon').WCircleMenu({
+					
+					
+                      width: '45px',
+					  height: '45px',
+                      angle_start : -Math.PI/1,
+                      delay: 50,
+                      distance: 100,
+                      angle_interval: Math.PI/6,
+                      easingFuncShow:"easeOutBack",
+                      easingFuncHide:"easeInBack",
+                      step:25,
+                      openCallback:false,
+                      closeCallback:false,
+                      itemRotation:360,
+                      iconRotation:180,
+				});
+
+				$('.icons').off('click').on('click',function(){
+					console.log($(this).text());
+				});
+
+				$('#openWCM').off('click').on('click',function(){
+					$('#menu_icon').WCircleMenu('open');
+				});
+
+				$('#closeWCM').off('click').on('click',function(){
+					$('#menu_icon').WCircleMenu('close');
+				});
+
+			});
+
+        </script>
+    </div>
+</div>
+    
+    
+    <!--<div>
+            <ul class="rotate">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#news">Product</a></li>
+              <li><a href="#contact">about us</a></li>
+              <li><a href="#about">contact us</a></li>
+            </ul>
+        </div>-->
+
+</body>
+</html>
